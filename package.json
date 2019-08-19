@@ -14,7 +14,7 @@
     "lint:fix": "yarn run lint --fix",
     "test": "yarn run test:build && yarn run test:run",
     "test:build": "yarn run build && yarn run build:application",
-    "test:run": "jest --coverage --testTimeout 30000"
+    "test:run": "jest --testTimeout 30000"
   },
   "devDependencies": {
     "@types/jest": "^24.0.18",

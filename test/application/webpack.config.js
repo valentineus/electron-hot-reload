@@ -1,3 +1,4 @@
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const path = require('path')
@@ -12,6 +13,9 @@ const mainConfig = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
   },
+  plugins: [
+    new CleanWebpackPlugin()
+  ],
   module: {
     rules: [{
       test: /\.js$/,
