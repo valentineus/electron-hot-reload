@@ -20,7 +20,11 @@
                 120
             ]
         },
-        "no-constant-condition": true
+        "mocha-avoid-only": false,
+        "mocha-no-side-effect-code": false,
+        "mocha-unneeded-done": false,
+        "no-constant-condition": true,
+        "no-relative-imports": false
     },
     "rulesDirectory": [
         "node_modules/tslint-eslint-rules/dist/rules"

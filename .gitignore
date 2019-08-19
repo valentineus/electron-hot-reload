@@ -161,3 +161,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Compiled files
+dist/
