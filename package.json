@@ -5,5 +5,19 @@
   "repository": "git@github.com:valentineus/ts-electron-reloader.git",
   "author": "Valentin Popov <info@valentineus.link>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "compile": "tsc --pretty --project ./",
+    "compile:watch": "yarn run compile --watch",
+    "lint": "tslint --format codeFrame --project ./",
+    "lint:fix": "yarn run lint --fix"
+  },
+  "devDependencies": {
+    "tslint": "^5.18.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-consistent-codestyle": "^1.15.1",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-microsoft-contrib": "^6.2.0",
+    "typescript": "^3.5.3"
+  }
 }
