@@ -1,0 +1,9 @@
+{
+  "name": "electron-reloader",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "repository": "git@github.com:valentineus/ts-electron-reloader.git",
+  "author": "Valentin Popov <info@valentineus.link>",
+  "license": "MIT",
+  "private": false
+}
