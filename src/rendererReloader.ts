@@ -39,7 +39,9 @@ export const rendererReloader: TRendererReloader = (
       handler(undefined, path);
     }
 
-    BrowserWindow.getAllWindows().forEach((window: BrowserWindow) => {
+    const windows: BrowserWindow[] = BrowserWindow.getAllWindows();
+
+    windows.forEach((window: BrowserWindow) => {
       window.webContents.reloadIgnoringCache();
     });
   });
