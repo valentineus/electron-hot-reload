@@ -1,0 +1,6 @@
+# Ignore everything
+*
+
+# Exceptions
+!main.json
+!renderer.json

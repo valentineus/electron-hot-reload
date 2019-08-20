@@ -8,21 +8,18 @@
   "private": false,
   "scripts": {
     "build": "yarn run build:plugin",
-    "build:application": "cd ./test/application && yarn run build",
+    "build:application": "cd ./example/application && yarn run build",
     "build:plugin": "tsc --pretty --project ./ --skipLibCheck",
+    "example": "yarn run example:build && yarn run example:run",
+    "example:build": "yarn run build && yarn run build:application",
+    "example:run": "cd ./example/application && yarn run start",
     "lint": "tslint --format codeFrame --project ./",
-    "lint:fix": "yarn run lint --fix",
-    "test": "yarn run test:build && yarn run test:run",
-    "test:build": "yarn run build && yarn run build:application",
-    "test:run": "jest --testTimeout 30000"
+    "lint:fix": "yarn run lint --fix"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.18",
     "@types/node": "^12.7.2",
     "electron": "^6.0.3",
-    "jest": "^24.9.0",
     "spectron": "^8.0.0",
-    "ts-jest": "^24.0.2",
     "tslint": "^5.18.0",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-consistent-codestyle": "^1.15.1",

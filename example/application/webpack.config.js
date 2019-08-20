@@ -1,9 +1,9 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const path = require('path')
 
 const mainConfig = {
+  devtool: 'source-map',
   mode: 'development',
   target: 'electron-main',
   entry: {
@@ -17,9 +17,6 @@ const mainConfig = {
     __dirname: true,
     __filename: true
   },
-  plugins: [
-    new CleanWebpackPlugin()
-  ],
   module: {
     rules: [{
       test: /\.js$/,
@@ -28,6 +25,8 @@ const mainConfig = {
         loader: 'babel-loader',
         options: {
           babelrc: false,
+          ignore: ['../../dist/**/*.js'],
+          plugins: ['@babel/plugin-transform-runtime'],
           presets: ['@babel/preset-env']
         }
       }
@@ -36,6 +35,7 @@ const mainConfig = {
 }
 
 const rendererConfig = {
+  devtool: 'source-map',
   mode: 'development',
   target: 'electron-renderer',
   entry: {

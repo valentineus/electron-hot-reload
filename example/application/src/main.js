@@ -1,23 +1,19 @@
 // Modules to control application life and create native browser window
 import { app, BrowserWindow } from 'electron'
-import path from 'path'
 
-import { mainReloader, rendererReloader } from '../../../dist'
+import './utils/reloader'
+import './utils/get-json'
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
-const dir = path.join(app.getAppPath(), 'temp')
-
-mainReloader(dir)
-rendererReloader(dir)
-
-function createWindow () {
+function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    show: false,
     webPreferences: {
       nodeIntegration: true
     }
@@ -36,6 +32,13 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+  // While loading the page, the ready - to - show event will be emitted
+	// when the renderer process has rendered the page for the first time
+	// if the window has not been shown yet.
+	mainWindow.on('ready-to-show', () => {
+		mainWindow.show();
+	});
 }
 
 // This method will be called when Electron has finished
