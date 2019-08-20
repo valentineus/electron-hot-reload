@@ -1,10 +1,17 @@
 // Modules to control application life and create native browser window
 import { app, BrowserWindow } from 'electron'
-// import { mainReloader, rendererReloader } from '../../../dist'
+import path from 'path'
+
+import { mainReloader, rendererReloader } from '../../../dist'
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+
+const dir = path.join(app.getAppPath(), 'temp')
+
+mainReloader(dir)
+rendererReloader(dir)
 
 function createWindow () {
   // Create the browser window.

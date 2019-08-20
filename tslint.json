@@ -23,6 +23,7 @@
         "mocha-avoid-only": false,
         "mocha-no-side-effect-code": false,
         "mocha-unneeded-done": false,
+        "newline-per-chained-call": false,
         "no-constant-condition": true,
         "no-relative-imports": false
     },

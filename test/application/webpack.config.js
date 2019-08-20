@@ -13,6 +13,10 @@ const mainConfig = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
   },
+  node: {
+    __dirname: true,
+    __filename: true
+  },
   plugins: [
     new CleanWebpackPlugin()
   ],
