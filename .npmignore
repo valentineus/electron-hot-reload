@@ -129,10 +129,6 @@ typings/
 .dynamodb/
 
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 
 # Ignore all local history of files
 .history
@@ -162,5 +158,13 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Compiled files
-dist/
+# Unnecessary directories
+.git/
+example/
+src/
+
+# Unnecessary files
+.editorconfig
+.gitignore
+tsconfig.json
+tslint.json

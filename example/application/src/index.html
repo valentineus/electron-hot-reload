@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, shrink-to-fit=no, width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="container text-center">
+        <h1>Last reload</h1>
+      </div>
+
+      <div class="container text-center">
+        <div>
+          Main Process:
+          <span id="main"></span>
+        </div>
+
+        <div>
+          Renderer Process:
+          <span id="renderer"></span>
+        </div>
+      </div>
+
+      <div class="container text-center pt-3">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-secondary" id="btnMain">Reload Main</button>
+          <button type="button" class="btn btn-secondary" id="btnRend">Reload Renderer</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+
+</html>

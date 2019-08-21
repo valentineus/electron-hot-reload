@@ -1,9 +1,50 @@
 {
-  "name": "electron-reloader",
-  "version": "0.0.1",
+  "description": "It is a simple method to restart your application.",
+  "name": "electron-live-reload",
+  "version": "0.1.0",
   "main": "dist/index.js",
-  "repository": "git@github.com:valentineus/ts-electron-reloader.git",
-  "author": "Valentin Popov <info@valentineus.link>",
+  "repository": "git@github.com:valentineus/electron-live-reload.git",
+  "author": {
+    "email": "info@valentineus.link",
+    "name": "Valentin Popov",
+    "url": "https://valentineus.link/"
+  },
   "license": "MIT",
-  "private": false
+  "private": false,
+  "keywords": [
+    "auto-reload",
+    "auto-restart",
+    "electron",
+    "live-reload",
+    "livereload",
+    "node",
+    "reload",
+    "reloader",
+    "restart",
+    "restarter"
+  ],
+  "scripts": {
+    "build": "yarn run build:plugin",
+    "build:application": "cd ./example/application && yarn run build",
+    "build:plugin": "tsc --pretty --project ./ --skipLibCheck",
+    "example": "yarn run example:build && yarn run example:run",
+    "example:build": "yarn run build && yarn run build:application",
+    "example:run": "cd ./example/application && yarn run start",
+    "lint": "tslint --format codeFrame --project ./",
+    "lint:fix": "yarn run lint --fix"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.2",
+    "electron": "^6.0.3",
+    "spectron": "^8.0.0",
+    "tslint": "^5.19.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-consistent-codestyle": "^1.15.1",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-microsoft-contrib": "^6.2.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "chokidar": "^3.0.2"
+  }
 }

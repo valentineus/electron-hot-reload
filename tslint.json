@@ -1,0 +1,33 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint-config-airbnb",
+        "tslint-consistent-codestyle",
+        "tslint-eslint-rules",
+        "tslint-microsoft-contrib/latest",
+        "tslint:all"
+    ],
+    "jsRules": {
+        "max-line-length": {
+            "options": [
+                120
+            ]
+        }
+    },
+    "rules": {
+        "max-line-length": {
+            "options": [
+                120
+            ]
+        },
+        "mocha-avoid-only": false,
+        "mocha-no-side-effect-code": false,
+        "mocha-unneeded-done": false,
+        "newline-per-chained-call": false,
+        "no-constant-condition": true,
+        "no-relative-imports": false
+    },
+    "rulesDirectory": [
+        "node_modules/tslint-eslint-rules/dist/rules"
+    ]
+}
