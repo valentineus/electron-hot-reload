@@ -1,5 +1,8 @@
 language: node_js
 
+node_js:
+  - node
+
 os:
   - linux
 
@@ -13,22 +16,29 @@ notifications:
   email:
     - 'info@valentineus.link'
 
-before_deploy:
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+install:
   - git stash --all
   - yarn install
   - yarn run build
+
+before_deploy:
   - npm pack
 
 deploy:
   - provider: npm
-    skip_cleanup: true
+    skip_cleanup: false
     email: 'info@valentineus.link'
     api_key: $NPM_PROJECT_TOKEN
     on:
       tags: true
 
   - provider: releases
-    skip_cleanup: true
+    skip_cleanup: false
     file_glob: true
     file: 'electron-hot-reload-*.tgz'
     email: 'info@valentineus.link'
