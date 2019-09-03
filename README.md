@@ -1,4 +1,4 @@
-# ElectronJS Live Reload
+# ElectronJS Hot Reload
 
 It is a simple method to restart your application.
 
@@ -15,16 +15,16 @@ First, you should install this package:
 
 ```bash
 # Yarn
-yarn add electron-live-reload
+yarn add electron-hot-reload
 
 # NPM
-npm install --save electron-live-reload
+npm install --save electron-hot-reload
 ```
 
 Next, you should create watchers:
 
 ```javascript
-import { mainReloader, rendererReloader } from 'electron-live-reload';
+import { mainReloader, rendererReloader } from 'electron-hot-reload';
 import { app } from 'electron';
 import path from 'path';
 
