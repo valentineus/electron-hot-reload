@@ -33,8 +33,7 @@ deploy:
   - provider: npm
     skip_cleanup: true
     email: 'info@valentineus.link'
-    api_key:
-      secure: $NPM_PROJECT_TOKEN
+    api_key: $NPM_PROJECT_TOKEN
     on:
       tags: true
 
