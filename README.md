@@ -1,5 +1,9 @@
 # ElectronJS Hot Reload
 
+![npm](https://badgen.net/npm/v/electron-hot-reload)
+![bundlephobia min](https://badgen.net/bundlephobia/min/electron-hot-reload)
+![bundlephobia minzip](https://badgen.net/bundlephobia/minzip/electron-hot-reload)
+
 It is a simple method to restart your application.
 
 Features:

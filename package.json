@@ -1,7 +1,7 @@
 {
   "description": "It is a simple method to restart your application.",
   "name": "electron-hot-reload",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "dist/index.js",
   "repository": "git@github.com:valentineus/electron-hot-reload.git",
   "author": {
@@ -11,6 +11,9 @@
   },
   "license": "MIT",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "auto-reload",
     "auto-restart",
