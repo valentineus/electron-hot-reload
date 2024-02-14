@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@types/node": "^12.7.3",
-    "electron": "^6.0.7",
+    "electron": "^22.3.25",
     "spectron": "^8.0.0",
     "tslint": "^5.19.0",
     "tslint-config-airbnb": "^5.11.1",
